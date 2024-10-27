@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../../shared/assets/Ladle_logo.png";
+import logo from "../../../assets/Ladle_logo.png";
 import Button from "../Elements/Button";
 
 const Navbar = () => {

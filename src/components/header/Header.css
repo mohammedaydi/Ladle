@@ -4,15 +4,12 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
-
   margin: 0;
   padding: 0;
-
-  background: url("../../shared/assets/header.png");
+  background: url("../../assets/header.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
   height: 100vh;
   width: 100%;
   padding: 0rem 3rem;
@@ -24,6 +21,7 @@
   font-size: 3rem;
   text-transform: capitalize;
 }
+
 .header-title h1 span {
   color: var(--purple);
   font-weight: bolder;

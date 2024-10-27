@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -6,8 +5,8 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import Homepage from "./HomePage/Homepage";
-import Navbar from "./shared/Navigation/Navbar";
+import Homepage from "./pages/HomePage/Homepage";
+import Navbar from "./components/shared/Navigation/Navbar";
 function App() {
   return (
     <div className="App">
