@@ -1,0 +1,23 @@
+.recipes {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 78px;
+  height: 100vh;
+  gap: 2rem;
+}
+
+.recipes-container {
+  flex: 3;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.7rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 100%;
+  padding: 10px 40px;
+}

@@ -1,0 +1,21 @@
+.checkbox-container {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  max-width: fit-content;
+}
+
+.checkbox-container label {
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.checkbox-container input {
+  cursor: pointer;
+  accent-color: var(--green);
+  width: 15px;
+  height: 15px;
+}

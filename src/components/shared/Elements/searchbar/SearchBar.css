@@ -1,0 +1,28 @@
+.searchbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0rem;
+}
+
+.searchbar input {
+  padding: 0.7rem 0.7rem;
+  width: 10vw;
+  border: none;
+  border-radius: 20px 0px 0px 20px;
+  outline: none;
+  transition: 500ms ease;
+}
+
+.searchbar input:focus {
+  width: 30vw;
+}
+
+.searchbar button {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 0px 20px 20px 0px;
+  cursor: pointer;
+  background-color: var(--purple);
+  color: white;
+}
