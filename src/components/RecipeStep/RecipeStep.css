@@ -1,0 +1,33 @@
+.recipe-step {
+  position: relative;
+  padding-left: 20px;
+}
+
+.recipe-step::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(30%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px white solid;
+}
+
+.recipe-step::after {
+  content: "";
+  width: 100%;
+  height: 50px;
+  position: relative;
+  display: block;
+  left: -15px;
+  border: 2px white dashed;
+  border-width: 2px;
+  border-width: 0px 0px 0px 2px;
+}
+
+.recipe-step:last-child::after {
+  display: none;
+}

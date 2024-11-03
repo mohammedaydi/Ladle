@@ -36,7 +36,7 @@ const RecipeItem = (props) => {
           <h2>{props.title}</h2>
         </div>
         <div className="recipe-action">
-          <Link to="/Recipe/:id">
+          <Link to={`/recipes/${props.id}`}>
             <Button id={props.id} color="green" size="1">
               details
             </Button>
