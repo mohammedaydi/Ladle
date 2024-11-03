@@ -1,0 +1,193 @@
+.recipes-filter {
+  flex: 1;
+  max-width: 250px;
+  height: 100%;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--purple);
+  color: white;
+  margin: 0;
+  border-radius: 0px 20px 20px 0px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  gap: 2rem;
+
+  overflow-y: scroll;
+}
+
+.recipes-filter__search,
+.recipes-filter__sort,
+.recipes-filter__filter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.recipes-filter__search input {
+  padding: 0.5rem 0.5rem;
+  width: 100%;
+  outline: none;
+  border: 2px #eee solid;
+  color: white;
+  background-color: transparent;
+  border-width: 0px 0px 1px 0px;
+}
+
+.recipes-filter__search input:focus {
+  border-color: var(--green);
+  border-width: 0px 0px 2px 0px;
+}
+
+.recipes-filter__search div:nth-child(1) {
+  width: 100%;
+  text-align: left;
+}
+
+.recipes-filter__search div:nth-child(2) {
+  width: 100%;
+}
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.ingredients .ingredients-suggestions {
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: scroll;
+  transition: 200ms ease;
+}
+
+.ingredients-suggestions p {
+  font-size: 0.8rem;
+  cursor: pointer;
+  width: 100%;
+  padding: 0.2rem 0rem;
+}
+
+.ingredients-suggestions p:hover {
+  background-color: var(--green);
+}
+
+.ingredients .ingredients-chosen {
+  width: 100%;
+  max-height: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-y: scroll;
+
+  gap: 0.4rem;
+}
+
+.ingredients-chosen p {
+  background-color: var(--white);
+  color: black;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.3rem 0.4rem;
+  border-radius: 10px;
+}
+
+.ingredients-chosen #ing0 {
+  background-color: red;
+  color: white;
+}
+
+.ingredients-chosen #ing1 {
+  background-color: white;
+  color: black;
+}
+
+.ingredients-chosen p:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+  color: white;
+}
+
+.recipes-filter__search div:nth-child(4) {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+.recipes-filter__sort div {
+  width: 100%;
+}
+
+.recipes-filter__sort select {
+  background-color: var(--green);
+  border: 3px var(--green) solid;
+  color: white;
+  width: 100%;
+  padding: 0.5rem 0.3rem;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+}
+
+.recipes-filter__sort select:focus {
+  border: 3px var(--green) solid;
+  outline: 1px white solid;
+}
+
+.recipes-filter__filter div {
+  width: 100%;
+}
+
+.recipes-filter__filter label {
+  font-size: 0.8rem;
+  font-weight: lighter;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: var(--green);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 15px; /* Set a specific slider handle width */
+  height: 15px; /* Slider handle height */
+  background: var(--green); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.filter-checkboxes {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
