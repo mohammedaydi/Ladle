@@ -7,7 +7,7 @@ import SearchBar from "../../Elements/searchbar/SearchBar";
 
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [linksState, setLinksState] = useState("");
   const { pathname } = useLocation();
 
@@ -33,7 +33,12 @@ const Navbar = () => {
       </div>
       {linksState ? <NavbarLinks /> : <SearchBar />}
       <div className="navbar-search">
-        <Button color="purple" size="3" id="explore">
+        <Button
+          color="purple"
+          size="3"
+          id="favButton"
+          onClick={props.manageFavourites}
+        >
           Favourites
         </Button>
       </div>
