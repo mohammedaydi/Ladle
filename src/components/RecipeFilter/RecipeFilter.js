@@ -26,7 +26,7 @@ const RecipeFilter = ({
     { name: "Healty", value: "veryHealthy" },
     { name: "Popular", value: "veryPopular" },
   ]);
-  const [showFilter, setShowFilter] = useState(false);
+  const [showFilter, setShowFilter] = useState(true);
 
   const handleResize = () => {
     if (window.innerWidth > 800) {

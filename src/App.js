@@ -16,6 +16,8 @@ import PageInterpreter from "./pages/DetailsPage/pageInterpreter/PageInterpreter
 import "./App.css";
 import Favourites from "./components/favourites/Favourites";
 
+const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
+
 function App() {
   const [recipes, setRecipes] = useState([]);
   const [searchValue, setValue] = useState("");
@@ -66,7 +68,7 @@ function App() {
   const fetchRecipies = async () => {
     try {
       const response = await fetch(
-        "https://api.spoonacular.com/recipes/complexSearch?apiKey=9621d08e65f74b1abbcf1c8549fbde66"
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${REACT_APP_API_KEY}`
       );
 
       const response_data = await response.json();
