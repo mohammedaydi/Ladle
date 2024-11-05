@@ -13,11 +13,11 @@ const RecipePage = ({ recipe }) => {
   const [similars, setSimilars] = useState([]);
   const { addToFavourites } = useContext(favContext);
 
-  const favHandler = (event) => {
+  const favHandler = () => {
     addToFavourites({ title: recipe.title, id: recipe.id });
   };
 
-  const { data, loading } = useFetch(
+  const [data, loading] = useFetch(
     "GET",
     `https://api.spoonacular.com/recipes/${recipe.id}/similar?apiKey=9621d08e65f74b1abbcf1c8549fbde66`
   );
@@ -25,7 +25,7 @@ const RecipePage = ({ recipe }) => {
   const fetchSimilars = async (ids) => {
     try {
       const response = await fetch(
-        `https://api.spoonacular.com/recipes/informationBulk?ids=${ids}&apiKey=apiKey=9621d08e65f74b1abbcf1c8549fbde66`
+        `https://api.spoonacular.com/recipes/informationBulk?ids=${ids}&apiKey=9621d08e65f74b1abbcf1c8549fbde66`
       );
 
       const response_data = await response.json();
@@ -40,6 +40,8 @@ const RecipePage = ({ recipe }) => {
 
   useEffect(() => {
     let params = "";
+    console.log("loading == ");
+    console.log(loading);
     if (!loading) {
       if (data) {
         for (let index = 0; index < data.length; index++) {
@@ -50,9 +52,11 @@ const RecipePage = ({ recipe }) => {
           }
           params += ",";
         }
+        console.log(params);
         fetchSimilars(params);
       }
-      setSimilars(extendedData); //dummy to be removed later
+
+      // setSimilars(extendedData); //dummy to be removed later
     }
   }, [data, loading]);
   return (

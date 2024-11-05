@@ -85,3 +85,70 @@
 .filter-range p {
   font-size: 0.9rem;
 }
+
+@media only screen and (max-width: 800px) {
+  .recipe {
+    width: 80vw;
+  }
+
+  .recipe-title {
+    width: calc(80vw - 160px);
+    max-width: calc(80vw - 160px);
+  }
+
+  .recipe-image img {
+    width: 140px;
+  }
+
+  .recipe-title h2 {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .recipe {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0rem;
+    border-radius: 20px;
+    width: 60vw;
+  }
+
+  .recipe-title {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    width: 60vw;
+    max-width: unset;
+  }
+  .recipe-image img {
+    width: 100%;
+    display: flex;
+    border-radius: 20px 20px 0px 0px;
+    transition: 500ms;
+  }
+  .recipe-title > div:nth-child(1) {
+    width: 60vw;
+  }
+
+  .recipe-title h2 {
+    font-size: 0.8rem;
+    width: 90%;
+  }
+  .recipe-action {
+    width: 100%;
+  }
+  .recipe-action a {
+    width: 100%;
+  }
+  .recipe-action button {
+    width: 100%;
+  }
+}

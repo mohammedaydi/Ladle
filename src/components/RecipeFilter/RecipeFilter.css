@@ -191,3 +191,81 @@
   flex-wrap: wrap;
   gap: 0.5rem;
 }
+
+.recipes-filter .searchbar button {
+  background-color: var(--green);
+}
+
+.recipes-filter .searchbar {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.recipes-filter .searchbar input {
+  width: 70%;
+}
+
+.recipes-filter__close {
+  display: none;
+}
+
+.recipes-entry {
+  display: none;
+}
+
+.recipes-entry button {
+  background-color: var(--purple);
+  color: white;
+  width: 60px;
+  height: 60px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 0px 50% 50% 0px;
+}
+.recipes-entry i {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 50% 50% 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .recipes-filter {
+    overflow-y: scroll;
+    position: absolute;
+    width: 80vw;
+    min-width: 250px;
+    max-width: 300px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 30;
+  }
+
+  .recipes-filter__close {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+
+  .recipes-entry {
+    display: block;
+    position: absolute;
+    top: 86px;
+    left: 0px;
+    z-index: 30;
+  }
+
+  .recipes-filter .searchbar {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+}

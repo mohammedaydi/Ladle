@@ -83,3 +83,30 @@
   color: rgba(0, 0, 0, 0.6);
   font-size: 0.8rem;
 }
+
+@media only screen and (max-width: 740px) {
+  .favourites-cont {
+    background-color: var(--white);
+    width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .favourites-cont {
+    background-color: var(--white);
+    width: 90vw;
+    padding: 0.9rem;
+  }
+
+  .favourites-cont h1 {
+    font-size: 1.3rem;
+  }
+
+  .favourites-cont li {
+    font-size: 0.8rem;
+  }
+
+  .favourites-cont p {
+    font-size: 0.7rem;
+  }
+}
