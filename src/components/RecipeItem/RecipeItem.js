@@ -9,15 +9,25 @@ const RecipeItem = (props) => {
 
   const mouseOverHandler = () => {
     if (itemRef.current && imgRef.current) {
-      itemRef.current.style = "width: calc(60vw + 80px); outline: none;";
-      imgRef.current.style = "width: 200px";
+      if (window.innerWidth > 800) {
+        itemRef.current.style = "width: calc(60vw + 80px); outline: none;";
+        imgRef.current.style = "width: 200px";
+      } else if (window.innerWidth <= 800 && window.innerWidth > 450) {
+        itemRef.current.style = "width: calc(80vw + 40px); outline: none;";
+        imgRef.current.style = "width: 170px";
+      }
     }
   };
 
   const mouseLeaveHandler = () => {
     if (itemRef.current && imgRef) {
-      itemRef.current.style = "width: 60vw; outline: 4px var(--green) solid;";
-      imgRef.current.style = "width: 170px; ";
+      if (window.innerWidth > 800) {
+        itemRef.current.style = "width: 60vw; outline: 4px var(--green) solid;";
+        imgRef.current.style = "width: 170px; ";
+      } else if (window.innerWidth <= 800 && window.innerWidth > 450) {
+        itemRef.current.style = "width: 80vw; outline: 4px var(--green) solid;";
+        imgRef.current.style = "width: 140px; ";
+      }
     }
   };
 

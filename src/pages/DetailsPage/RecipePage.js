@@ -8,24 +8,25 @@ import extendedData from "../../dev/recipes";
 import "./RecipePage.css";
 import RecipeStep from "../../components/RecipeStep/RecipeStep";
 import favContext from "../../components/shared/context/favourites-context";
+const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
 
 const RecipePage = ({ recipe }) => {
   const [similars, setSimilars] = useState([]);
   const { addToFavourites } = useContext(favContext);
 
-  const favHandler = (event) => {
+  const favHandler = () => {
     addToFavourites({ title: recipe.title, id: recipe.id });
   };
 
-  const { data, loading } = useFetch(
+  const [data, loading] = useFetch(
     "GET",
-    `https://api.spoonacular.com/recipes/${recipe.id}/similar?apiKey=9621d08e65f74b1abbcf1c8549fbde66`
+    `https://api.spoonacular.com/recipes/${recipe.id}/similar?apiKey=${REACT_APP_API_KEY}`
   );
 
   const fetchSimilars = async (ids) => {
     try {
       const response = await fetch(
-        `https://api.spoonacular.com/recipes/informationBulk?ids=${ids}&apiKey=apiKey=9621d08e65f74b1abbcf1c8549fbde66`
+        `https://api.spoonacular.com/recipes/informationBulk?ids=${ids}&apiKey=${REACT_APP_API_KEY}`
       );
 
       const response_data = await response.json();
@@ -52,7 +53,6 @@ const RecipePage = ({ recipe }) => {
         }
         fetchSimilars(params);
       }
-      setSimilars(extendedData); //dummy to be removed later
     }
   }, [data, loading]);
   return (
